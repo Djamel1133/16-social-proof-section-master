@@ -1,0 +1,207 @@
+/* ==========================
+   Root Variables for Colors, Font Sizes, and Weights
+========================== */
+/* Primary */
+$Very-Dark-Magenta: hsl(300, 43%, 22%) ;
+$Soft-Pink: hsl(333, 80%, 67%) ;
+/* Neutral */
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%) ;
+$Light-Grayish-Magenta: hsl(300, 24%, 96%) ;
+$White: hsl(0, 0%, 100%) ;
+
+/* font weight */
+$fw-small: 400;
+$fw-medium: 500;
+$fw-large: 700;
+/* font size */
+$fs-smaller: .9375rem ; 
+$fs-small:  1rem;
+$fs-medium: 1.125rem; 
+$fs-large: 1.250rem;
+$fs-x-large: 2.750rem; 
+
+/* ==========================
+   Global Reset and Base Styles
+========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: $fs-medium;
+  font-weight: $fs-medium;
+  text-align: center;
+}
+
+.container {
+  padding: 1rem;
+  background-image: url(images/bg-pattern-top-mobile.svg) ;
+  background-repeat: no-repeat;  
+  background-size: 400px 400px;
+}
+
+h1 {
+  font-size: $fs-x-large;
+  font-weight: $fw-large;
+  color: $Very-Dark-Magenta;
+  line-height: 0.9;
+  margin: 2.5rem 0 1rem 0;
+}
+
+h2 {
+ text-align: left;
+ font-size: $fs-medium;
+ font-weight: $fw-medium;
+}
+
+.section {
+  margin: 1.5rem 0;
+}
+
+.introduction{
+  padding:2.5rem;
+  p {
+     font-size: $fs-medium;
+     font-weight: $fw-medium;
+     color: $Dark-Grayish-Magenta ;
+     line-height: 1.2;
+    }
+}
+
+.rating {
+  .rating_div {
+    margin: 1rem; 
+  }
+  div { 
+   background-color: $Light-Grayish-Magenta ;
+   padding: 0.5rem;
+   border-radius: 10px ;
+   color: $Very-Dark-Magenta;
+   font-weight: $fw-large;
+   font-size: $fs-smaller ;
+   line-height: 0.75;
+
+ .stars { /* display 5 stars in this div */
+  display: inline-block; 
+  height: 24px;  /* here size is exactelly 16px (not in rem) / height of eah start is 16px*/
+  width: 126px;  /* width of 5 stars (17*5) + margin (7*5) */
+  background-image: url("images/icon-star.svg"), url("images/icon-star.svg"), url("images/icon-star.svg"), url("images/icon-star.svg"), url("images/icon-star.svg");
+  background-repeat: no-repeat ;
+  background-position: 6px 0, 30px 0, 54px 0, 78px 0, 102px 0; /* began at 6px and a 7px gap (17px for star image + 7px gap = 24px step) */
+  background-size: 17px 16px;  /* Size of each star */
+  }
+ }
+}
+
+.card {
+  border-radius: 10px;
+  background-color: $Very-Dark-Magenta;
+  padding: .875rem;
+  margin: 1rem 0;
+  color: $Light-Grayish-Magenta;
+ 
+  p{
+   line-height: 1.5;
+   text-align: left;
+   font-size: $fs-small;
+   font-weight: $fw-medium;
+   margin: 1rem;
+   max-height: 8.5rem;
+  }
+  
+  .author {
+  margin: 1.25rem;
+  display: flex;
+  align-items: center;
+    img{
+    border-radius: 50%;  
+     width: auto;
+     height: 2.5rem;
+    margin-right: 1.5rem;
+    }
+    .author-infos {
+    line-height: 1.25;
+    text-align: left;
+    span {
+      font-size: $fs-small;
+      font-weight: $fw-medium;
+      color: $Soft-Pink;
+      opacity: 0.85;
+    }
+  }
+} 
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem;
+  a {
+    color: hsl(228, 45%, 44%);
+    }
+  }
+
+  @media (min-width: 52rem) {
+    .container {
+      padding: 3rem 6rem;
+      display: grid;
+      place-content: center;
+      gap: 1rem; 
+      grid-template-columns: auto auto;
+      grid-template-rows: auto 20rem;
+      grid-template-areas:
+        'header-left header-right '
+        'main main';
+    }
+    
+    .introduction { 
+      grid-area: header-left; 
+      h1 {
+        margin: 0 3rem 1rem 3rem;
+      }
+      p {
+        text-align: left;
+      }
+    }
+
+    .rating{
+      grid-area: header-right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      :nth-child(1){
+        align-self: flex-start; }
+       :nth-child(2){
+       align-self: center;      }
+       :nth-child(3){
+        align-self: flex-end;   }
+
+      .rating_div {
+          width: 25rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          line-height: 1;
+          margin: 1rem;
+        }
+    }
+   
+    .cards {
+      grid-area: main;
+      display:flex ;
+      justify-content: space-between;
+      gap: 1rem;
+      
+      :nth-child(1){
+        align-self: flex-start; }
+       :nth-child(2){
+       align-self: center;      }
+       :nth-child(3){
+        align-self: flex-end;   }
+    }
+  }
+  

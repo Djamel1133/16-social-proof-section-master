@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Icon-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <!--Style-->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Title -->
+  <title>Frontend Mentor | Social proof section</title>
+</head>
+<body>
+  <main class="container">
+    <!-- Introduction section -->
+    <section class="introduction section">
+      <h1>10,000+ of our users love our products.</h1>
+      <p>
+        We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.
+      </p>
+    </section>
+    
+    <!-- Rating section with 3 ratings div-->
+    <section class="rating section">
+      <div class="rating_div">
+        <div class="stars" aria-label="5 stars"></div>
+        <p>Rated 5 Stars in Reviews</p>
+      </div>
+     
+      <div class="rating_div">
+        <div class="stars" aria-label="5 stars"></div>
+        <p>Rated 5 Stars in Report Guru</p>
+      </div>
+      
+      <div class="rating_div">
+        <!-- this div to put a background image with 5 stars -->
+        <!-- another solution is to create a div with 5 images or just do it with Elegant js -->
+        <div class="stars" aria-label="5 stars"></div>
+        <p>Rated 5 Stars in BestTech</p>
+      </div>
+    </section>
+    
+    <!-- Cards section contains 3 cards-->
+    <section class="cards">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="author">
+          <img src="/images/image-colton.jpg" alt="Colton Smith s profile picture">
+          <div class="author-infos">
+            <h2>Colton Smith</h2>
+            <span>Verified Buyer</span>
+          </div>       
+        </div> 
+        <!-- Review comment -->
+        <p>
+          "We needed the same printed design as the one we had ordered a week prior.
+          Not only did they find the original order, but we also received it in time.
+          Excellent!"
+        </p>
+      </article>
+      
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="author">
+          <img src="/images/image-irene.jpg" alt="Irene Robert s profile picture">
+          <div class="author-infos">
+            <h2>Irene Roberts</h2>
+            <span>Verified Buyer</span>
+          </div>       
+        </div> 
+        <!-- Review comment -->
+        <p>
+          "Customer service is always excellent and very quick turn around. Completely
+          delighted with the simplicity of the purchase and the speed of delivery."
+        </p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="author">
+          <img src="/images/image-anne.jpg" alt="Anne Wallace s profile picture">
+          <div class="author-infos">
+            <h2>Anne Wallace</h2>
+            <span>Verified Buyer</span>
+          </div>       
+        </div> 
+        <!-- Review comment -->
+        <p>
+          "Put an order with this company and can only praise them for the very high
+          standard. Will definitely use them again and recommend them to everyone!"
+        </p>
+      </article>
+    </section>
+  </main>
+  
+  <!--Footer for attributions and references-->
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Djamel1133" target="_blank">Djamel1133</a>.
+    </div>
+  </footer>
+</body>
+</html>
